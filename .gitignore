@@ -32,3 +32,13 @@ yarn-error.log*
 
 # vercel
 .vercel
+package-lock.json
+.idea/ashutosh-dev.iml
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+yarn.lock
+.idea/.gitignore
