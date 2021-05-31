@@ -9,7 +9,10 @@ function CategoriesItem() {
                     Categories.map(event =>
                         <div key={event}>
                             <li className="mt-2 mb-2 mr-4 py-4 px-4" id={event} >
-                                - <a className="hover:underline hover:text-cyan-600" href="#"> {event} </a>
+                                -
+                                <Link href={'/?categories=' + event}>
+                                    <a className="hover:underline hover:text-cyan-600" > {event} </a>
+                                </Link>
                             </li>
                             <hr />
                         </div>
