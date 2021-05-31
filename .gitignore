@@ -42,3 +42,4 @@ package-lock.json
 .idea/inspectionProfiles/profiles_settings.xml
 yarn.lock
 .idea/.gitignore
+.idea/csv-plugin.xml
