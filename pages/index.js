@@ -35,7 +35,8 @@ export async function getStaticProps(context) {
             date: data[index].published_at,
             body: data[index].body_markdown,
             description: data[index].description,
-            categories: catList
+            categories: catList,
+            slug: data[index].slug
         });
     }
 
