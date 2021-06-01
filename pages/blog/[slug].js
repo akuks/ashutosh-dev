@@ -1,7 +1,9 @@
+import BlogDetailsComponent from "../../components/Blog/BlogDetailsComponent";
+
 function IndividualBlogPage(props) {
     return (
         <div>
-            Individual blog page
+            <BlogDetailsComponent />
         </div>
     )
 }
