@@ -1,10 +1,14 @@
 import ReactMarkdown from 'react-markdown';
+import styles from './BlogStyles'
 
-function BlogDetailsComponent() {
-    const title  = '# Title of the post';
+function BlogDetailsComponent(props) {
+    // console.log(props.blog.title)
     return (
-        <div>
-            <ReactMarkdown >{title}</ReactMarkdown>
+        <div className={`ml-10 mt-4 w-3/5 container mr-4 shadow rounded border blogs `}>
+            <ReactMarkdown >{props.blog.body}</ReactMarkdown>
+            <style jsx global>
+                {styles}
+            </style>
         </div>
     )
 } 
