@@ -3,6 +3,7 @@ import Link from "next/link";
 function IndividualBlogDetails(props) {
     const event = props.details
     const cat = (event.categories).split(", ");
+    
     let count = 1;
     return (
         <div key={event.slug} className={`border-b shadow rounded-md hover:shadow-lg hover:border`}>
