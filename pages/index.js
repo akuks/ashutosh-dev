@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import CategoriesComponent from "../components/Categories/CategoriesComponent";
 import BlogComponent from "../components/Blog/BlogComponent";
-import fs from 'fs'
-import path from 'path'
+
+import getAllBlogsData from "../Utilities/FileRead";
 
 function Home(props) {
   return (
@@ -24,28 +24,11 @@ function Home(props) {
 }
 
 export async function getStaticProps(context) {
-    let blog = new Array();
-    const fileToRead = path.join(process.cwd(), '/data/articles.json')
-    const data = JSON.parse(await fs.readFileSync(fileToRead))
-
-    for (let index in data) {
-        const catList = data[index].cached_tag_list
-        blog.push({
-            title: data[index].title,
-            date: data[index].published_at,
-            body: data[index].body_markdown,
-            description: data[index].description,
-            categories: catList,
-            slug: data[index].slug
-        });
-    }
-
-    // Reverse an Array
-    const reverseData = blog.slice(0).reverse()
+    const data = getAllBlogsData('/data/articles.json')
 
     return  {
         props: {
-            sample_blogs: reverseData
+            sample_blogs: data
         }
     }
 }
