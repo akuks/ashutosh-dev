@@ -1,7 +1,7 @@
 import CategoriesComponent from "../components/Categories/CategoriesComponent";
 
 export default {
-    title: 'App/Categories',
+    title: 'App/Category',
     component: CategoriesComponent
 }
 
