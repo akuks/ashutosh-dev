@@ -23,13 +23,13 @@ function IndividualBlogDetails(props) {
                         <time className={`hover:underline hover:text-cyan-500`}>{humanReadableDate(event.date)}</time>
                     </small>
                 </p>
-                {/*Categories Belongs to*/}
+                {/*Category Belongs to*/}
                 <div className={`ml-10 mb-4`}>
                     {
                         cat.map
                         ( event =>
                             <span key={cat + count++} className={`inline-block bg-cyan-200 text-cyan-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide mr-2`}>
-                                <Link href={`/?categories=${encodeURIComponent(event)}` }>
+                                <Link href={`/categories/${encodeURIComponent(event)}` }>
                                     <a className={`hover:underline`}>{event}</a>
                                 </Link>
                             </span>

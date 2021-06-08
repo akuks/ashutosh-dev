@@ -3,7 +3,8 @@ import path from "path";
 
 // Get All Blogs Details
 export default function getAllBlogsData(fileName) {
-    let blog = new Array()
+    let blog = []
+
     const data = getFileData(fileName)
     
     for (let index in data) {
@@ -20,9 +21,31 @@ export default function getAllBlogsData(fileName) {
     }
 
     // Reverse an Array
-    const reverseData = blog.slice(0).reverse()
+    return blog.slice(0).reverse()
+}
 
-    return reverseData
+export function getCategoryBlogsData(fileName, category) {
+
+    let blog = []
+
+    const data = getFileData(fileName)
+
+    for (let index in data) {
+        const catList = data[index].cached_tag_list
+
+        if (catList.toLowerCase().indexOf(category) != -1) {
+            blog.push({
+                title: data[index].title,
+                date: data[index].published_at,
+                body: data[index].body_markdown,
+                description: data[index].description,
+                categories: catList,
+                slug: data[index].slug
+            });
+        }
+    }
+
+    return blog.slice(0).reverse()
 }
 
 // Get Individual Blog Data from slug
