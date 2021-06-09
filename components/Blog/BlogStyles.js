@@ -5,8 +5,9 @@ export default css.global `
       font-weight: 400;
       font-size: 0.8em;
     }
+    
 
-    p, ul, li {
+    p, ul, li, ol {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, Arial;
       letter-spacing: calc(0px * 16);
       line-height: calc(2.5px * 16);
@@ -15,7 +16,7 @@ export default css.global `
       animation-iteration-count: 1!important;
     }
 
-    .blogs h1, p, ul {
+    .blogs h1, p, ul, ol {
       margin-left: 1.5em;
     }
 
@@ -38,6 +39,12 @@ export default css.global `
     .blogs ul > li {
       margin-left: 1.5em;
       font-weight: 400;
+    }
+    
+    .blogs ol {
+      margin-left: 1.5em;
+      font-size: 1.2em;
+      list-style-type: none;
     }
 
 
