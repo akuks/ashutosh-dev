@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3500",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3500",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -17,7 +17,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "^6.0.2",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.3",
+    "styled-jsx": "^3.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
