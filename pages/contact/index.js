@@ -1,7 +1,9 @@
+import ContactComponent from "../../components/Contact/ContactComponent";
+
 function ContactPage() {
     return (
         <div>
-            Contact me via some medium
+            <ContactComponent />
         </div>
     )
 }
